@@ -11,5 +11,9 @@
   .container {
     display: flex;
     align-items: flex-start;
+
+    img {
+      cursor: pointer;
+    }
   }
 }
