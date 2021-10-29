@@ -1,1 +1,15 @@
 // TODO
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  @media screen and (max-width: 1080px) {
+    padding: 4rem 2.5rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+}
