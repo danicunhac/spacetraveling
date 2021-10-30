@@ -1,9 +1,54 @@
 // TODO
 .wrapper {
+  max-width: 1120px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 0 0 2.5rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1080px) {
+    padding: 0 2.5rem 2.5rem;
+  }
+
+  .postContainer {
+    + div {
+      margin-top: 4rem;
+    }
+  }
+
+  .postTitle {
+    color: var(--heading);
+    font-weight: 600;
+    font-size: 1.75rem;
+  }
+
+  .postSubtitle {
+    font-size: 1.125rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .postInfo {
+    display: flex;
+    > span {
+      margin-right: 1rem;
+    }
+
+    span {
+      display: flex;
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .loadMore {
+    margin-top: 4rem;
+    border: none;
+    background: none;
+    color: var(--highlight);
+    align-self: flex-start;
+  }
 }
