@@ -89,10 +89,9 @@ export default function Post({ post }: PostProps): JSX.Element {
         <div className={styles.postContent}>
           {data.content.map(({ heading, body }) => {
             return (
-              <div key={heading || `${body}`}>
+              <div className={styles.postBody} key={heading || `${body}`}>
                 {heading && <h3>{heading}</h3>}
                 <div
-                  className={styles.postBody}
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{
                     __html: RichText.asHtml(body),

@@ -31,8 +31,28 @@
       }
     }
 
-    .postBody {
+    .postContent {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       text-align: justify;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+
+      ul {
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .postBody {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   }
 }
