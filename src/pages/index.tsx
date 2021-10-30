@@ -2,6 +2,7 @@ import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FiCalendar, FiUser } from 'react-icons/fi';
@@ -60,6 +61,9 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
 
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <title>Home | Space Traveling</title>
+      </Head>
       {posts.map(({ uid: slug, first_publication_date, data }) => (
         <Link href={`/post/${slug}`} as={`/post/${slug}`} key={slug}>
           <div className={styles.postContainer}>
